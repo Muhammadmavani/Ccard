@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Staferm — Business Cards</title>
+  <title>Fatimah Mavani — Staferm</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -19,14 +19,6 @@
       justify-content: center;
       font-family: 'DM Sans', sans-serif;
       padding: 2rem 1rem;
-    }
-
-    .cards-container {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      max-width: 900px;
     }
 
     .card {
@@ -112,7 +104,7 @@
       color: #185FA5;
     }
 
-    .li-icon, .wa-icon {
+    .icon-logo {
       width: 20px;
       height: 20px;
       flex-shrink: 0;
@@ -188,90 +180,66 @@
       opacity: 1;
       transform: translateX(-50%) translateY(0);
     }
+
+    .back-btn {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-size: 13px;
+      font-family: 'DM Sans', sans-serif;
+      transition: background 0.15s;
+    }
+
+    .back-btn:hover { background: rgba(255,255,255,0.3); }
   </style>
 </head>
 <body>
+  <a href="index.html" class="back-btn">← Back</a>
 
-  <div class="cards-container">
-    <!-- Fatimah Mavani Card -->
-    <div class="card">
-      <div class="card-header">
-        <p class="card-name">Fatimah Mavani</p>
-        <p class="card-title">Director of Operations</p>
-        <p class="card-company">Staferm</p>
-      </div>
-
-      <div class="card-body">
-        <a class="info-row" href="tel:16474656410">
-          <i class="ti ti-phone" aria-hidden="true"></i>
-          <span>+1 647 465 6410</span>
-        </a>
-        <a class="info-row" href="mailto:Fatimah.mavani@gmail.com">
-          <i class="ti ti-mail" aria-hidden="true"></i>
-          <span>Fatimah.mavani@gmail.com</span>
-        </a>
-        <a class="info-row linked" href="https://www.linkedin.com/company/staferm/" target="_blank" rel="noopener">
-          <svg class="li-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="24" height="24" rx="4" fill="#0A66C2"/>
-            <path d="M7.5 10H5.5V18H7.5V10Z" fill="white"/>
-            <circle cx="6.5" cy="7.5" r="1.25" fill="white"/>
-            <path d="M13 13.5C13 12.4 13.7 11.5 14.8 11.5C15.9 11.5 16.5 12.3 16.5 13.5V18H18.5V13.2C18.5 11.2 17.3 10 15.5 10C14.3 10 13.5 10.6 13 11.3V10H11V18H13V13.5Z" fill="white"/>
-          </svg>
-          <span>Staferm on LinkedIn</span>
-        </a>
-      </div>
-
-      <div class="divider"></div>
-
-      <div class="card-actions">
-        <button class="btn btn-primary" onclick="saveContact('Fatimah', 'Mavani', 'Fatimah Mavani', 'Director of Operations', '16474656410', 'Fatimah.mavani@gmail.com')">
-          <i class="ti ti-user-plus" aria-hidden="true"></i>
-          Save contact
-        </button>
-        <button class="btn btn-secondary" onclick="shareContact('16474656410', 'Fatimah')">
-          <i class="ti ti-share" aria-hidden="true"></i>
-          Share your contact with me
-        </button>
-      </div>
+  <div class="card">
+    <div class="card-header">
+      <p class="card-name">Fatimah Mavani</p>
+      <p class="card-title">Director of Operations</p>
+      <p class="card-company">Staferm</p>
     </div>
 
-    <!-- Mahmood Rashid Card -->
-    <div class="card">
-      <div class="card-header">
-        <p class="card-name">Mahmood Rashid</p>
-        <p class="card-title">President</p>
-        <p class="card-company">Staferm</p>
-      </div>
+    <div class="card-body">
+      <a class="info-row" href="tel:16474656410">
+        <i class="ti ti-phone" aria-hidden="true"></i>
+        <span>+1 647 465 6410</span>
+      </a>
+      <a class="info-row" href="mailto:Fatimah.mavani@gmail.com">
+        <i class="ti ti-mail" aria-hidden="true"></i>
+        <span>Fatimah.mavani@gmail.com</span>
+      </a>
+      <a class="info-row linked" href="https://www.linkedin.com/company/staferm/" target="_blank" rel="noopener">
+        <svg class="icon-logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="24" height="24" rx="4" fill="#0A66C2"/>
+          <path d="M7.5 10H5.5V18H7.5V10Z" fill="white"/>
+          <circle cx="6.5" cy="7.5" r="1.25" fill="white"/>
+          <path d="M13 13.5C13 12.4 13.7 11.5 14.8 11.5C15.9 11.5 16.5 12.3 16.5 13.5V18H18.5V13.2C18.5 11.2 17.3 10 15.5 10C14.3 10 13.5 10.6 13 11.3V10H11V18H13V13.5Z" fill="white"/>
+        </svg>
+        <span>Staferm on LinkedIn</span>
+      </a>
+    </div>
 
-      <div class="card-body">
-        <a class="info-row" href="tel:18336478376">
-          <i class="ti ti-phone" aria-hidden="true"></i>
-          <span>1 833 GOSTFRM</span>
-        </a>
-        <a class="info-row linked" href="https://wa.me/16048126781" target="_blank" rel="noopener">
-          <svg class="wa-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.47-.148-.67.15-.23.297-.921.967-1.129 1.167-.206.199-.412.223-.71.054-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48[...]" fill="#25D366"/>
-          </svg>
-          <span>1 604.812.6781</span>
-        </a>
-        <a class="info-row" href="mailto:mahmood.rashid@staferm.com">
-          <i class="ti ti-mail" aria-hidden="true"></i>
-          <span>mahmood.rashid@staferm.com</span>
-        </a>
-      </div>
+    <div class="divider"></div>
 
-      <div class="divider"></div>
-
-      <div class="card-actions">
-        <button class="btn btn-primary" onclick="saveContact('Rashid', 'Mahmood', 'Mahmood Rashid', 'President', '16048126781', 'mahmood.rashid@staferm.com')">
-          <i class="ti ti-user-plus" aria-hidden="true"></i>
-          Save contact
-        </button>
-        <button class="btn btn-secondary" onclick="shareContact('16048126781', 'Mahmood')">
-          <i class="ti ti-share" aria-hidden="true"></i>
-          Share your contact with me
-        </button>
-      </div>
+    <div class="card-actions">
+      <button class="btn btn-primary" onclick="saveContact('Mavani', 'Fatimah', 'Fatimah Mavani', 'Director of Operations', '16474656410', 'Fatimah.mavani@gmail.com')">
+        <i class="ti ti-user-plus" aria-hidden="true"></i>
+        Save contact
+      </button>
+      <button class="btn btn-secondary" onclick="shareContact('16474656410', 'Fatimah')">
+        <i class="ti ti-share" aria-hidden="true"></i>
+        Share your contact with me
+      </button>
     </div>
   </div>
 
@@ -320,6 +288,5 @@
       }
     }
   </script>
-
 </body>
 </html>
