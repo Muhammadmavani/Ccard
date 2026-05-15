@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fatimah Mavani — Staferm</title>
+  <title>Staferm — Business Cards</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -19,6 +19,14 @@
       justify-content: center;
       font-family: 'DM Sans', sans-serif;
       padding: 2rem 1rem;
+    }
+
+    .cards-container {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 900px;
     }
 
     .card {
@@ -104,7 +112,7 @@
       color: #185FA5;
     }
 
-    .li-icon {
+    .li-icon, .wa-icon {
       width: 20px;
       height: 20px;
       flex-shrink: 0;
@@ -184,44 +192,86 @@
 </head>
 <body>
 
-  <div class="card">
-    <div class="card-header">
-      <p class="card-name">Fatimah Mavani</p>
-      <p class="card-title">Director of Operations</p>
-      <p class="card-company">Staferm</p>
+  <div class="cards-container">
+    <!-- Fatimah Mavani Card -->
+    <div class="card">
+      <div class="card-header">
+        <p class="card-name">Fatimah Mavani</p>
+        <p class="card-title">Director of Operations</p>
+        <p class="card-company">Staferm</p>
+      </div>
+
+      <div class="card-body">
+        <a class="info-row" href="tel:16474656410">
+          <i class="ti ti-phone" aria-hidden="true"></i>
+          <span>+1 647 465 6410</span>
+        </a>
+        <a class="info-row" href="mailto:Fatimah.mavani@gmail.com">
+          <i class="ti ti-mail" aria-hidden="true"></i>
+          <span>Fatimah.mavani@gmail.com</span>
+        </a>
+        <a class="info-row linked" href="https://www.linkedin.com/company/staferm/" target="_blank" rel="noopener">
+          <svg class="li-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="24" height="24" rx="4" fill="#0A66C2"/>
+            <path d="M7.5 10H5.5V18H7.5V10Z" fill="white"/>
+            <circle cx="6.5" cy="7.5" r="1.25" fill="white"/>
+            <path d="M13 13.5C13 12.4 13.7 11.5 14.8 11.5C15.9 11.5 16.5 12.3 16.5 13.5V18H18.5V13.2C18.5 11.2 17.3 10 15.5 10C14.3 10 13.5 10.6 13 11.3V10H11V18H13V13.5Z" fill="white"/>
+          </svg>
+          <span>Staferm on LinkedIn</span>
+        </a>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="card-actions">
+        <button class="btn btn-primary" onclick="saveContact('Fatimah', 'Mavani', 'Fatimah Mavani', 'Director of Operations', '16474656410', 'Fatimah.mavani@gmail.com')">
+          <i class="ti ti-user-plus" aria-hidden="true"></i>
+          Save contact
+        </button>
+        <button class="btn btn-secondary" onclick="shareContact('16474656410', 'Fatimah')">
+          <i class="ti ti-share" aria-hidden="true"></i>
+          Share your contact with me
+        </button>
+      </div>
     </div>
 
-    <div class="card-body">
-      <a class="info-row" href="tel:16474656410">
-        <i class="ti ti-phone" aria-hidden="true"></i>
-        <span>+1 647 465 6410</span>
-      </a>
-      <a class="info-row" href="mailto:Fatimah.mavani@gmail.com">
-        <i class="ti ti-mail" aria-hidden="true"></i>
-        <span>Fatimah.mavani@gmail.com</span>
-      </a>
-      <a class="info-row linked" href="https://www.linkedin.com/company/staferm/" target="_blank" rel="noopener">
-        <svg class="li-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="24" height="24" rx="4" fill="#0A66C2"/>
-          <path d="M7.5 10H5.5V18H7.5V10Z" fill="white"/>
-          <circle cx="6.5" cy="7.5" r="1.25" fill="white"/>
-          <path d="M13 13.5C13 12.4 13.7 11.5 14.8 11.5C15.9 11.5 16.5 12.3 16.5 13.5V18H18.5V13.2C18.5 11.2 17.3 10 15.5 10C14.3 10 13.5 10.6 13 11.3V10H11V18H13V13.5Z" fill="white"/>
-        </svg>
-        <span>Staferm on LinkedIn</span>
-      </a>
-    </div>
+    <!-- Mahmood Rashid Card -->
+    <div class="card">
+      <div class="card-header">
+        <p class="card-name">Mahmood Rashid</p>
+        <p class="card-title">President</p>
+        <p class="card-company">Staferm</p>
+      </div>
 
-    <div class="divider"></div>
+      <div class="card-body">
+        <a class="info-row" href="tel:18336478376">
+          <i class="ti ti-phone" aria-hidden="true"></i>
+          <span>1 833 GOSTFRM</span>
+        </a>
+        <a class="info-row linked" href="https://wa.me/16048126781" target="_blank" rel="noopener">
+          <svg class="wa-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.47-.148-.67.15-.23.297-.921.967-1.129 1.167-.206.199-.412.223-.71.054-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371 0-.57 0-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.869 1.171l-.546-.274L6.598 2.268l.645 1.891a9.882 9.882 0 00-1.746 5.153c0 5.487 4.47 9.957 9.957 9.957 2.663 0 5.16-1.034 7.052-2.91 1.893-1.875 2.935-4.372 2.935-7.046 0-5.487-4.469-9.956-9.957-9.956" fill="#25D366"/>
+          </svg>
+          <span>1 604.812.6781</span>
+        </a>
+        <a class="info-row" href="mailto:mahmood.rashid@staferm.com">
+          <i class="ti ti-mail" aria-hidden="true"></i>
+          <span>mahmood.rashid@staferm.com</span>
+        </a>
+      </div>
 
-    <div class="card-actions">
-      <button class="btn btn-primary" onclick="saveContact()">
-        <i class="ti ti-user-plus" aria-hidden="true"></i>
-        Save contact
-      </button>
-      <button class="btn btn-secondary" onclick="shareContact()">
-        <i class="ti ti-share" aria-hidden="true"></i>
-        Share your contact with me
-      </button>
+      <div class="divider"></div>
+
+      <div class="card-actions">
+        <button class="btn btn-primary" onclick="saveContact('Rashid', 'Mahmood', 'Mahmood Rashid', 'President', '16048126781', 'mahmood.rashid@staferm.com')">
+          <i class="ti ti-user-plus" aria-hidden="true"></i>
+          Save contact
+        </button>
+        <button class="btn btn-secondary" onclick="shareContact('16048126781', 'Mahmood')">
+          <i class="ti ti-share" aria-hidden="true"></i>
+          Share your contact with me
+        </button>
+      </div>
     </div>
   </div>
 
@@ -235,17 +285,17 @@
       setTimeout(() => t.classList.remove('show'), 2800);
     }
 
-    function saveContact() {
+    function saveContact(lastName, firstName, fullName, title, phone, email) {
       const vcard = [
         'BEGIN:VCARD',
         'VERSION:3.0',
-        'FN:Fatimah Mavani',
-        'N:Mavani;Fatimah;;;',
+        `FN:${fullName}`,
+        `N:${lastName};${firstName};;;`,
         'ORG:Staferm',
-        'TITLE:Director of Operations',
-        'TEL;TYPE=CELL:+16474656410',
-        'EMAIL:Fatimah.mavani@gmail.com',
-        'URL:https://www.linkedin.com/company/staferm/',
+        `TITLE:${title}`,
+        `TEL;TYPE=CELL:+1${phone}`,
+        `EMAIL:${email}`,
+        'URL:https://www.staferm.com/',
         'END:VCARD'
       ].join('\n');
 
@@ -253,15 +303,14 @@
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'Fatimah_Mavani.vcf';
+      a.download = `${fullName.replace(' ', '_')}.vcf`;
       a.click();
       URL.revokeObjectURL(url);
       showToast('Contact saved!');
     }
 
-    function shareContact() {
-      const smsBody = encodeURIComponent("Hi Fatimah! Here's my contact info:");
-      const phone = '16474656410';
+    function shareContact(phone, name) {
+      const smsBody = encodeURIComponent(`Hi ${name}! Here's my contact info:`);
       const isMobile = /iPhone|Android/i.test(navigator.userAgent);
 
       if (isMobile) {
